@@ -1,7 +1,2 @@
-aspek,positif,negatif
-umum,24,25
-fitur,30,98
-performa,155,302
-tampilan,30,98
-pembayaran,90,87
-pemesanan,99,156
+positif,negatif,netral,konflik
+30,150,20,1
