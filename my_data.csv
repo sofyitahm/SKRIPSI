@@ -1,5 +1,2 @@
-kategori,jumlah
-Positif,20
-Negatif,109
-Netral,5
-Konflik,20
+Positif,Negatif,Netral,Konflik
+20,30,70,80
