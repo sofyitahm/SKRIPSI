@@ -1,21 +1,14 @@
 import streamlit as st
-import pandas as pd
 import matplotlib.pyplot as plt
 
-# Membaca CSV
-df = pd.read_csv("my_data.csv")
+# Pie chart, where the slices will be ordered and plotted counter-clockwise:
+labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
+sizes = [15, 30, 45, 10]
+explode = (0, 0.1, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
-# Menampilkan data frame
-st.write("Data Frame:", df)
-
-# Extracting data from the DataFrame
-kategori = df['kategori']
-jumlah = df['jumlah']
-
-# Membuat diagram pie chart dengan matplotlib
 fig1, ax1 = plt.subplots()
-ax1.pie(jumlah, labels=kategori, autopct='%1.1f%%', shadow=True, startangle=90)
+ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
-# Menampilkan diagram pie chart menggunakan streamlit
 st.pyplot(fig1)
